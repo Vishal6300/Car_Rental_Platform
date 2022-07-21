@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home-Page</title>
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+        <img
+          src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
+          alt="company-logo"
+        />
+        <div><h5>Sanitised.Safe</h5></div>
+      </div>
+      <div id="nav2">
+        <button id="hyundai"><b>Hyundai</b> subscription</button>
+        <button id="mahindra"><b>Mahindra</b> subscription</button>
+        <h3>FAQs</h3>
+        <input type="submit" id="login" value="▶️Login & Signup" />
+      </div>
+    </div>
+    <div id="container">
+      <div id="crouser">
+        <img
+          src="https://www.revv.co.in/assets/RentalImages/HomeScreen/heroCarousel/ST_Desktop_1_FG.webp"
+          alt="Senitised car"
+          id="crousers"
+        />
+        <button id="left"><</button>
+        <button id="right">></button>
+
+        <form>
+          <!-- Rentals and subscription div  -->
+          <div id="optional">
+            <!-- Rental div -->
+            <div>
+              <h2>Rentals</h2>
+              <p>For hours & days</p>
+            </div>
+            <!--  subscription div  -->
+            <div>
+              <h2>Subscriptions</h2>
+              <p>For months & years</p>
+            </div>
+          </div>
+          <div class="middle">
+            <img
+              src="https://www.revv.co.in/imgs/logo-rentals.svg"
+              alt="rentals"
+            />
+            <h3>Self drive car rentals in india</h3>
+          </div>
+
+          <div id="inputs">
+            <select>
+              <option>Banglore</option>
+              <option>Hyderabad</option>
+              <option>Mumbai</option>
+              <option>Delhi-NCR</option>
+              <option>Chennai</option>
+              <option>Pune</option>
+              <option>Kolkata</option>
+              <option>Ahmedabad</option>
+              <option>Bhubaneswar</option>
+              <option>Mysore</option>
+              <option>Tirupati</option>
+              <option>Jaipur</option>
+            </select>
+            <input type="date" id="timing" value="Start Time" />
+            <input type="date" id="timing" value="End Time" />
+            <input type="submit" id="submit" value="Search" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let imagesLink = [
+    "https://wallpaperaccess.com/full/13643.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlbkiBbOp3liGe4PDbsdGyqGmS2z5xS6GwA8QbBZFaSFuUMxmrDzH4oLkv4UT0wDfkC9w&usqp=CAU",
+    "https://www.99images.com/download-image/982857/1920x1080",
+  ];
+
+  let leftBtn = document.getElementById("left");
+  let rightBtn = document.getElementById("right");
+  let crousers = document.getElementById("crousers");
+
+  let imageState = 0;
+  rightBtn.addEventListener("click", function () {
+    imageState++;
+    if (imageState === imagesLink.length) {
+      imageState = 0;
+    }
+    crousers.src = imagesLink[imageState];
+  });
+  leftBtn.addEventListener("click", function () {
+    imageState--;
+    if (imageState < 0) {
+      imageState = imagesLink.length - 1;
+    }
+    crousers.src = imagesLink[imageState];
+  });
+</script>
