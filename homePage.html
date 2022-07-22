@@ -35,8 +35,12 @@
                 >Send a new password to my email ID</a
               >
             </p>
-            <button type="submit" id="signin">Login</button>
-            <p>Don't have an account?<span id="signup">Sign Up</span></p>
+            <button type="submit" id="signin" onclick="Login();">Login</button>
+            <p>
+              Don't have an account?<span id="signup" onclick="signUp();"
+                >Sign Up</span
+              >
+            </p>
             <div id="google">
               <button>
                 <a
@@ -57,10 +61,10 @@
             </div>
           </form>
         </div>
-        <div id="myModal" class="modal">
+        <div id="myModelSignUp" class="modal">
           <!-- Modal content -->
           <form class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" onclick="closeSignup();">&times;</span>
             <!-- <p>Some text in the Modal..</p> -->
             <h3>LOGIN</h3>
             <input type="email" id="email" placeholder="Enter Email" />
@@ -70,8 +74,12 @@
                 >Send a new password to my email ID</a
               >
             </p>
-            <button type="submit" id="signin">Login</button>
-            <p>Don't have an account?<span id="signup">Sign Up</span></p>
+            <button type="submit" id="signin" onclick="Login();">Login</button>
+            <p>
+              Don't have an account?<span id="signup" onclick="signUp()"
+                >Sign Up</span
+              >
+            </p>
             <div id="google">
               <button>
                 <a
@@ -110,7 +118,9 @@
                 >Send a new password to my email ID</a
               >
             </p>
-            <button type="submit" id="signup">Sign up</button>
+            <button type="submit" id="signup" onclick="sinupUser();">
+              Sign up
+            </button>
             <!-- <p>Don't have an account?<span id="signup">Sign Up</span></p> -->
             <div id="google">
               <button>
@@ -122,12 +132,16 @@
                     style="width: 200px"
                 /></a>
               </button>
-              <button>
-                <a href="https://www.facebook.com/">
+              <button type="button" class="btn btn-primary">
+                <img
+                  src="https://unidaddy.com/media/images/social/login-facebook.png"
+                  style="width: 200px"
+                />
+                <!--  <a href="https://www.facebook.com/">
                   <img
                     src="https://unidaddy.com/media/images/social/login-facebook.png"
                     style="width: 200px"
-                /></a>
+                /></a> -->
               </button>
             </div>
           </form>
@@ -221,3 +235,32 @@
 </script>
 <script src="login.js"></script>
 <script src="signup.js"></script>
+<script
+  language="JavaScript"
+  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-1.11.3.min.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+></script>
+<script>
+  function signUp() {
+    $("#myModal").css("display", "none");
+    $("#myModal1").modal("toggle");
+    $("#myModal1").modal("show");
+  }
+  function closeSignup() {
+    $("#myModal1").css("display", "none");
+  }
+
+  function sinupUser() {
+    var email1 = $("#email1").val();
+    var password1 = $("#password1").val();
+    localStorage.setItem("email", email1);
+    localStorage.setItem("password", password1);
+  }
+</script>
