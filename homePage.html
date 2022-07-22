@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home-Page</title>
     <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="signup.css" />
   </head>
   <body>
     <div id="navbar">
@@ -20,13 +21,120 @@
         <button id="hyundai"><b>Hyundai</b> subscription</button>
         <button id="mahindra"><b>Mahindra</b> subscription</button>
         <h3>FAQs</h3>
-        <input type="submit" id="login" value="▶️Login & Signup" />
+        <input type="submit" id="login" value="➡️Login & Signup" />
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <form class="modal-content">
+            <span class="close">&times;</span>
+            <!-- <p>Some text in the Modal..</p> -->
+            <h3>LOGIN</h3>
+            <input type="email" id="email" placeholder="Enter Email" />
+            <input type="password" id="password" placeholder="Enter Password" />
+            <p>
+              <a href="https://www.gmail.com/"
+                >Send a new password to my email ID</a
+              >
+            </p>
+            <button type="submit" id="signin">Login</button>
+            <p>Don't have an account?<span id="signup">Sign Up</span></p>
+            <div id="google">
+              <button>
+                <a
+                  href="https://accounts.google.com/signin/v2/identifier?ec=hpp_signin_001&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                >
+                  <img
+                    src="https://www.patterson.k12.ca.us/UserFiles/Servers/Server_18037253/Templates/login-google.png"
+                    style="width: 200px"
+                /></a>
+              </button>
+              <button>
+                <a href="https://www.facebook.com/">
+                  <img
+                    src="https://unidaddy.com/media/images/social/login-facebook.png"
+                    style="width: 200px"
+                /></a>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <form class="modal-content">
+            <span class="close">&times;</span>
+            <!-- <p>Some text in the Modal..</p> -->
+            <h3>LOGIN</h3>
+            <input type="email" id="email" placeholder="Enter Email" />
+            <input type="password" id="password" placeholder="Enter Password" />
+            <p>
+              <a href="https://www.gmail.com/"
+                >Send a new password to my email ID</a
+              >
+            </p>
+            <button type="submit" id="signin">Login</button>
+            <p>Don't have an account?<span id="signup">Sign Up</span></p>
+            <div id="google">
+              <button>
+                <a
+                  href="https://accounts.google.com/signin/v2/identifier?ec=hpp_signin_001&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                >
+                  <img
+                    src="https://www.patterson.k12.ca.us/UserFiles/Servers/Server_18037253/Templates/login-google.png"
+                    style="width: 200px"
+                /></a>
+              </button>
+              <button>
+                <a href="https://www.facebook.com/">
+                  <img
+                    src="https://unidaddy.com/media/images/social/login-facebook.png"
+                    style="width: 200px"
+                /></a>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Sign up pop up page -->
+        <div id="myModal1" class="modal1">
+          <!-- Modal content -->
+          <form class="modal-content1">
+            <span class="close1">&times;</span>
+            <!-- <p>Some text in the Modal..</p> -->
+            <h3>Signup</h3>
+            <input type="email" id="email" placeholder="Enter Email" />
+            <input type="password" id="password" placeholder="Enter Password" />
+            <p>
+              <a href="https://www.gmail.com/"
+                >Send a new password to my email ID</a
+              >
+            </p>
+            <button type="submit" id="signup">Sign up</button>
+            <!-- <p>Don't have an account?<span id="signup">Sign Up</span></p> -->
+            <div id="google">
+              <button>
+                <a
+                  href="https://accounts.google.com/signin/v2/identifier?ec=hpp_signin_001&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                >
+                  <img
+                    src="https://www.patterson.k12.ca.us/UserFiles/Servers/Server_18037253/Templates/login-google.png"
+                    style="width: 200px"
+                /></a>
+              </button>
+              <button>
+                <a href="https://www.facebook.com/">
+                  <img
+                    src="https://unidaddy.com/media/images/social/login-facebook.png"
+                    style="width: 200px"
+                /></a>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- signup pop up ends -->
       </div>
     </div>
     <div id="container">
       <div id="crouser">
         <img
-          src="https://www.revv.co.in/assets/RentalImages/HomeScreen/heroCarousel/ST_Desktop_1_FG.webp"
+          src="https://i.postimg.cc/0QPV2RzN/1st.jpg"
           alt="Senitised car"
           id="crousers"
         />
@@ -40,6 +148,7 @@
             <div>
               <h2>Rentals</h2>
               <p>For hours & days</p>
+              <div class="arrowDown"></div>
             </div>
             <!--  subscription div  -->
             <div>
@@ -70,8 +179,8 @@
               <option>Tirupati</option>
               <option>Jaipur</option>
             </select>
-            <input type="date" id="timing" value="Start Time" />
-            <input type="date" id="timing" value="End Time" />
+            <input type="date" id="timing" placeholder="Start Time" />
+            <input type="date" id="timing" placeholder="End Time" />
             <input type="submit" id="submit" value="Search" />
           </div>
         </form>
@@ -81,9 +190,9 @@
 </html>
 <script>
   let imagesLink = [
-    "https://wallpaperaccess.com/full/13643.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlbkiBbOp3liGe4PDbsdGyqGmS2z5xS6GwA8QbBZFaSFuUMxmrDzH4oLkv4UT0wDfkC9w&usqp=CAU",
-    "https://www.99images.com/download-image/982857/1920x1080",
+    "https://i.postimg.cc/0QPV2RzN/1st.jpg",
+    "https://i.postimg.cc/d0tqSKTK/2nd.png",
+    "https://i.postimg.cc/85FcCV4V/3rdL.png",
   ];
 
   let leftBtn = document.getElementById("left");
@@ -106,3 +215,5 @@
     crousers.src = imagesLink[imageState];
   });
 </script>
+<script src="login.js"></script>
+<script src="signup.js"></script>
