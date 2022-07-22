@@ -22,3 +22,19 @@ window.onclick = function (event) {
     modal1.style.display = "none";
   }
 };
+let signupArr = JSON.parse(localStorage.getItem("SignupData")) || [];
+let form = document.querySelector("form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  let obj = {
+    email: document.getElementById("email1").value,
+    password: document.getElementById("password1").value,
+  };
+  if (obj.email == "" || obj.password == "") {
+    alert("field empty");
+    return;
+  }
+  signupArr.push(obj);
+  localStorage.setItem("SignupData", JSON.stringify(signupArr));
+});
