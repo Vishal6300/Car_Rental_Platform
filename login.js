@@ -24,31 +24,31 @@ window.onclick = function (event) {
 };
 // document.querySelector("form").addEventListener("submit", loginFunc);
 // let loginArr = JSON.parse(localStorage.getItem("loginData")) || [];
-let signinLS = JSON.parse(localStorage.getItem("SignupData")) || [];
-let form= document.querySelector("form");
+let signinLS = JSON.parse(localStorage.getItem("email")) || [];
+let form = document.querySelector("form");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  if(signinLS.length==0){
+  if (signinLS.length == 0) {
     alert("No user till now");
     return;
-}
+  }
 
   let obj = {
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
   };
-  let flag= false;
-  signinLS.forEach(function(ele){
-      if(ele.email===obj.email && ele.password===obj.password){
-          flag= true;
-          localStorage.setItem("loginData",JSON.stringify(ele));
-          alert ("signIn successfull");
-          window.location.href="homePage.html";        
-      }
-  })
-  if(flag===false){
-      alert ("User doesn't Exist");
+  let flag = false;
+  signinLS.forEach(function (ele) {
+    if (ele.email === obj.email && ele.password === obj.password) {
+      flag = true;
+      localStorage.setItem("email", JSON.stringify(ele));
+      alert("signIn successfull");
+      window.location.href = "homePage.html";
+    }
+  });
+  if (flag === false) {
+    alert("User doesn't Exist");
   }
 });
 
@@ -58,3 +58,17 @@ form.addEventListener("submit", function (event) {
 // }
 // loginArr.push(obj);
 // localStorage.setItem("loginData", JSON.stringify(loginArr));
+
+function Login() {
+  var emails = $("#email").val();
+  var email = localStorage.getItem("email");
+  console.log(emails);
+  var password = localStorage.getItem("password");
+
+  var password1 = $("#password").val();
+  if (emails == email) {
+    alert("User login successfully");
+  } else {
+    alert("Wrong username or password !!!");
+  }
+}

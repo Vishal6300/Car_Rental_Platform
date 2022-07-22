@@ -1,4 +1,4 @@
-var modal1 = document.getElementById("myModal1");
+//var modal1 = document.getElementById("myModelSignUp");
 
 // Get the button that opens the modal
 var btn1 = document.getElementById("signup");
@@ -38,3 +38,7 @@ form.addEventListener("submit", function (event) {
   signupArr.push(obj);
   localStorage.setItem("SignupData", JSON.stringify(signupArr));
 });
+
+function signUp() {
+  alert(1);
+}
