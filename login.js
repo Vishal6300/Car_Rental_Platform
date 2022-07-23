@@ -27,30 +27,30 @@ window.onclick = function (event) {
 let signinLS = JSON.parse(localStorage.getItem("email")) || [];
 let form = document.querySelector("form");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  if (signinLS.length == 0) {
-    alert("No user till now");
-    return;
-  }
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault();
+//   if (signinLS.length == 0) {
+//     alert("No user till now");
+//     return;
+//   }
 
-  let obj = {
-    email: document.getElementById("email").value,
-    password: document.getElementById("password").value,
-  };
-  let flag = false;
-  signinLS.forEach(function (ele) {
-    if (ele.email === obj.email && ele.password === obj.password) {
-      flag = true;
-      localStorage.setItem("email", JSON.stringify(ele));
-      alert("signIn successfull");
-      window.location.href = "homePage.html";
-    }
-  });
-  if (flag === false) {
-    alert("User doesn't Exist");
-  }
-});
+//   let obj = {
+//     email: document.getElementById("email").value,
+//     password: document.getElementById("password").value,
+//   };
+//   let flag = false;
+//   signinLS.forEach(function (ele) {
+//     if (ele.email === obj.email && ele.password === obj.password) {
+//       flag = true;
+//       localStorage.setItem("email", JSON.stringify(ele));
+//       alert("signIn successfull");
+//       window.location.href = "homePage.html";
+//     }
+//   });
+//   if (flag === false) {
+//     alert("User doesn't Exist");
+//   }
+// });
 
 // if (obj.email == "" || obj.password == "") {
 //   alert("field empty");

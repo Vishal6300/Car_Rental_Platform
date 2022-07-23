@@ -1,4 +1,4 @@
-//var modal1 = document.getElementById("myModelSignUp");
+var modal1 = document.getElementById("myModelSignUp");
 
 // Get the button that opens the modal
 var btn1 = document.getElementById("signup");

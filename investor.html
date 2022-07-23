@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home-Page</title>
+    <title>Our journey & Investors</title>
     <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="investor.css" />
   </head>
   <body>
     <div id="navbar">
@@ -138,10 +139,10 @@
                   style="width: 200px"
                 />
                 <!--  <a href="https://www.facebook.com/">
-                  <img
-                    src="https://unidaddy.com/media/images/social/login-facebook.png"
-                    style="width: 200px"
-                /></a> -->
+                    <img
+                      src="https://unidaddy.com/media/images/social/login-facebook.png"
+                      style="width: 200px"
+                  /></a> -->
               </button>
             </div>
           </form>
@@ -149,91 +150,107 @@
         <!-- signup pop up ends -->
       </div>
     </div>
-    <div id="container">
-      <div id="crouser">
-        <img
-          src="https://i.postimg.cc/0QPV2RzN/1st.jpg"
-          alt="Senitised car"
-          id="crousers"
-        />
-        <button id="left"><</button>
-        <button id="right">></button>
+    <!-- Location and time section starts -->
+    <div id="nav2">
+      <div id="inputs1">
+        <select>
+          <option>💧Select Location</option>
+          <option>💧Banglore</option>
+          <option>💧Hyderabad</option>
+          <option>💧Mumbai</option>
+          <option>💧Delhi-NCR</option>
+          <option>💧Chennai</option>
+          <option>💧Pune</option>
+          <option>💧Kolkata</option>
+          <option>💧Ahmedabad</option>
+          <option>💧Bhubaneswar</option>
+          <option>💧Mysore</option>
+          <option>💧Tirupati</option>
+          <option>💧Jaipur</option>
+        </select>
+        <input type="date" id="timing" placeholder="Start Time" />
+        <input type="date" id="timing" placeholder="End Time" />
+        <input type="submit" id="submit" value="Search" />
+      </div>
+    </div>
+    <!-- Journey Container -->
+    <div id="Jcontainer">
+      <div><h1>Our Journey so far</h1></div>
+      <div class="Jcontent">
+        <div>
+          <img
+            src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/ourJourney/revvers.png"
+            alt="emoji1"
+          />
+          <h2 style="margin-left: 5px">1 Mn+</h2>
+          <p style="margin-left: -45px">Happy Revvers</p>
+        </div>
+        <div>
+          <img
+            src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/ourJourney/cities.png"
+            alt="emoji1"
+          />
+          <h2 style="margin-left: 5px">22+ Cities</h2>
+          <p style="margin-left: -45px">Across India</p>
+        </div>
+        <div>
+          <img
+            src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/ourJourney/travel.png"
+            alt="emoji1"
+          />
+          <h2 style="margin-left: 5px">50 Mn +</h2>
+          <p style="margin-left: -45px">Kms travelled</p>
+        </div>
+        <div>
+          <img
+            src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/ourJourney/review.png"
+            alt="emoji1"
+          />
+          <h2 style="margin-left: 5px">4.8 / 5</h2>
+          <p style="margin-left: -45px">20K+ reviewers</p>
+        </div>
+      </div>
+    </div>
+    <!-- Investor Container -->
+    <div id="Jcontainer">
+      <div><h1>Investors</h1></div>
+      <div class="Icontent">
+        <div>
+          <img
+            src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/investors/hyundai.webp"
+            alt="emoji1"
+          />
 
-        <form>
-          <!-- Rentals and subscription div  -->
-          <div id="optional">
-            <!-- Rental div -->
-            <div>
-              <h2>Rentals</h2>
-              <p>For hours & days</p>
-              <div class="arrowDown"></div>
-            </div>
-            <!--  subscription div  -->
-            <div>
-              <h2>Subscriptions</h2>
-              <p>For months & years</p>
-            </div>
-          </div>
-          <div class="middle">
-            <img
-              src="https://www.revv.co.in/imgs/logo-rentals.svg"
-              alt="rentals"
-            />
-            <h3>Self drive car rentals in india</h3>
-          </div>
+          <p>Hyundai Motor Company</p>
+        </div>
+        <div>
+          <img
+            src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/investors/edelweissFinancialServices.webp"
+            alt="emoji1"
+          />
 
-          <div id="inputs">
-            <select>
-              <option>Select Location</option>
-              <option>Banglore</option>
-              <option>Hyderabad</option>
-              <option>Mumbai</option>
-              <option>Delhi-NCR</option>
-              <option>Chennai</option>
-              <option>Pune</option>
-              <option>Kolkata</option>
-              <option>Ahmedabad</option>
-              <option>Bhubaneswar</option>
-              <option>Mysore</option>
-              <option>Tirupati</option>
-              <option>Jaipur</option>
-            </select>
-            <input type="date" id="timing" placeholder="Start Time" />
-            <input type="date" id="timing" placeholder="End Time" />
-            <input type="submit" id="submit" value="Search" />
-          </div>
-        </form>
+          <p>Edelweiss Financial Services</p>
+        </div>
+        <div>
+          <img
+            src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/investors/dreamIncubator.webp"
+            alt="emoji1"
+          />
+
+          <p>Dream Incubator</p>
+        </div>
+        <div>
+          <img
+            src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/investors/beenext.webp"
+            alt="emoji1"
+          />
+
+          <p>Beenext</p>
+        </div>
       </div>
     </div>
   </body>
 </html>
-<script>
-  let imagesLink = [
-    "https://i.postimg.cc/0QPV2RzN/1st.jpg",
-    "https://i.postimg.cc/d0tqSKTK/2nd.png",
-    "https://i.postimg.cc/85FcCV4V/3rdL.png",
-  ];
-
-  let leftBtn = document.getElementById("left");
-  let rightBtn = document.getElementById("right");
-  let crousers = document.getElementById("crousers");
-
-  let imageState = 0;
-  rightBtn.addEventListener("click", function () {
-    imageState++;
-    if (imageState === imagesLink.length) {
-      imageState = 0;
-    }
-    crousers.src = imagesLink[imageState];
-  });
-  leftBtn.addEventListener("click", function () {
-    imageState--;
-    if (imageState < 0) {
-      imageState = imagesLink.length - 1;
-    }
-    crousers.src = imagesLink[imageState];
-  });
-</script>
 <script src="login.js"></script>
 <script src="signup.js"></script>
 <script
